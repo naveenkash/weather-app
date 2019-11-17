@@ -1,28 +1,70 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Main v-if="position.coords"></Main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Main from "./components/main.vue";
+import { mapActions } from "vuex";
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    Main
+  },
+  data() {
+    return {
+      position: {}
+    };
+  },
+  methods: {
+    Getlocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          this.displayLocationInfo,
+          this.handleLocationError
+        );
+      } else {
+        alert("navigation isn't supported");
+      }
+    },
+    displayLocationInfo(position) {
+      this.setCoords(position);
+      this.position = position;
+    },
+
+    handleLocationError(error) {
+      switch (error.code) {
+        case 1:
+          alert("please allow location to get the weather info");
+          break;
+        default:
+          alert("some error occured");
+      }
+    },
+    ...mapActions(["setCoords"])
+  },
+  created() {
+    this.Getlocation();
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  margin: 0;
+  padding: 0;
+}
+.fullWidth{
+    width: 100% !important;
 }
 </style>
