@@ -1,30 +1,30 @@
 <template>
-  <div class="weather-side-menu" :class={hideOnBurgerClicked:getBurgerClicked}>
+  <div class="weather-side-menu" :class="{hideOnBurgerClicked:getBurgerClicked}">
     <div class="side-data">
       <div class="side-info">
         <span class="side-key data-key">Area</span>
         <span>{{data.name}}</span>
       </div>
-      <SideWeatherDetail class="side-info" :data="data"/>
+      <SideWeatherDetail class="side-info" :data="data" />
     </div>
   </div>
 </template>
 <script>
-import SideWeatherDetail from './sideWeatherDetails'
-import {mapGetters} from 'vuex'
+import SideWeatherDetail from "./sideWeatherDetails";
+import { mapGetters } from "vuex";
 export default {
   props: ["data"],
-  components:{
+  components: {
     SideWeatherDetail
   },
- computed: {
-     ...mapGetters(["getBurgerClicked"])
- },
+  computed: {
+    ...mapGetters(["getBurgerClicked"])
+  }
 };
 </script>
 <style>
-.hideOnBurgerClicked{
-    right: -25% !important;
+.hideOnBurgerClicked {
+  right: -25% !important;
 }
 .weather-side-menu {
   height: 100vh;
@@ -56,5 +56,18 @@ export default {
 .side-info-value {
   width: 100%;
   margin-top: 25px;
+}
+@media only screen and (max-width: 1150px) {
+  .weather-side-menu {
+    background: #1a1a1a;
+    z-index: 9;
+    width: 300px;
+  }
+  .hideOnBurgerClicked {
+    right: -300px !important;
+  }
+  .side-data {
+    padding-top: 75px;
+  }
 }
 </style>

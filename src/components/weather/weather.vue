@@ -37,7 +37,13 @@ export default {
   height: 100%;
   position: relative;
 }
+
 .top-element {
   z-index: 10;
+}
+@media only screen and (max-width:1150px){
+  .weather{
+    width: 100%;
+  }
 }
 </style>

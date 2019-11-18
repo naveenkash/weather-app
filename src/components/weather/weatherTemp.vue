@@ -3,7 +3,6 @@
     <h1 class="weather-degree">{{getTemperature}}&#176;</h1>
     <div class="weather-quote">
       <h1 class="weather-quote-1"><b>{{data.weather[0].main}}</b></h1>
-      <!-- <h1 class="weather-quote-2">Little smokey</h1> -->
     </div>
   </div>
 </template>
@@ -36,7 +35,6 @@ export default {
   font-size: 30px;
 }
 .weather-quote-1 {
-  margin-bottom: 10px;
   font-size: 30px;
 }
 .weather-quote-2 {
@@ -44,5 +42,10 @@ export default {
 }
 h1{
     color: white;
+}
+@media only screen and (max-width:767px){
+  .weather-degree{
+    font-size: 10em;
+  }
 }
 </style>

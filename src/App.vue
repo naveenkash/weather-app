@@ -77,6 +77,7 @@ body {
 .fullWidth {
   width: 100% !important;
 }
+
 .container{
   width: 1150px;
   margin: 0 auto; 
