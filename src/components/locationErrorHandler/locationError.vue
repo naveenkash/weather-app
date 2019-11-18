@@ -22,10 +22,17 @@ export default {
     .location-text{
         text-align: center;
         height: 100%;
-        padding-top: 180px;
+        padding-top: 180px !important;
     }
     .location-text h1{
         font-size: 2.5em;
         color:#A12C34;
+        text-shadow: 1px 1px 30px;
+    }
+    @media only screen and (max-width:667px){
+       .location-text h1{
+            font-size: 2em;
+            line-break: 35px;
+        }
     }
 </style>

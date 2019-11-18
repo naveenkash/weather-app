@@ -82,9 +82,18 @@ body {
   width: 1150px;
   margin: 0 auto; 
 }
+/* @media only screen and (max-width:1170px) {
+  .widthAdjust{
+    width: 100% !important;
+  }
+} */
 @media only screen and (max-width:1150px) {
   .widthAdjust{
     width: 100% !important;
+  }
+  .container{
+    width: 100%;
+    padding:0 10px;
   }
 }
 </style>

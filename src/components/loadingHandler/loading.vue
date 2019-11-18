@@ -22,7 +22,7 @@ export default {
         height: 100vh;
     }
     .load{
-        width: 100px;
+        width: auto;
         height: auto;
         position: absolute;
         top: 50%;
@@ -31,7 +31,7 @@ export default {
     }
     .loading-bar{
         width: 5px;
-        height: 50px;
+        height: 45px;
         background: rgb(25, 59, 109);
         display: inline-block;
         margin: 0 5px;
@@ -58,7 +58,7 @@ export default {
     }
     @keyframes loading{
      0%{
-         transform: scale(1.5);
+         transform: scale(1.8);
      }
      100%{
          transform: scale(1);

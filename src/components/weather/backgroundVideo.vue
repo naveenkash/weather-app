@@ -67,7 +67,7 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.459);
+  background: rgba(0, 0, 0, 0.281);
   width: 100%;
   height: 100%;
 }
