@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # wheather-app
 
 ## Project setup
@@ -25,10 +25,3 @@ npm run test
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-=======
-# vue-weather
-vue weather app
->>>>>>> 690f3ea02df8a1db132584a3734fb9c787a4a6c4
