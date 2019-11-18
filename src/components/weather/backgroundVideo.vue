@@ -28,36 +28,36 @@ export default {
       this.atmosId === 801 ||
       this.atmosId > 801 
     ) {
-      this.videoSource = "/assets/videos/SkyAndClouds.mp4";
+      this.videoSource = "/assets/videos/clouds.mp4";
     } else if (this.atmosId === 800) {
-      this.videoSource = "/assets/videos/Clouds_and_Blue_Sky_CCBY_NatureClip.mp4";
+      this.videoSource = "/assets/videos/clear_sky.mp4";
     } else if (
       this.atmosId === 701 ||
       this.atmosId > 701 
     ) {
-      this.videoSource = "/assets/videos/180301_02_A_Rooftop_07.mp4";
+      this.videoSource = "/assets/videos/haze.mp4";
     } else if (
       this.atmosId === 600 ||
       this.atmosId > 600 
     ) {
-      this.videoSource = "/assets/videos/Snow-H264 75.mov.mp4";
+      this.videoSource = "/assets/videos/snow.mp4";
     } else if (
       this.atmosId === 500 ||
       this.atmosId > 500 
     ) {
-      this.videoSource = "/assets/videos/DSCN0569rain.mp4";
+      this.videoSource = "/assets/videos/rain.mp4";
     } else if (
       this.atmosId === 300 ||
       this.atmosId > 300 
     ) {
-      this.videoSource = "/assets/videos/DSCN0569rain.mp4";
+      this.videoSource = "/assets/videos/rain.mp4";
     } else if (
       this.atmosId === 200 ||
       this.atmosId > 200
     ) {
-      this.videoSource = "/assets/videos/Rain_on_Window_2__Rack_Focus.mp4";
+      this.videoSource = "/assets/videos/thunderstorm.mp4";
     } else {
-      this.videoSource = "/assets/videos/180301_02_A_Rooftop_07.mp4";
+      this.videoSource = "/assets/videos/haze.mp4";
     }
   }
 };
