@@ -48,7 +48,6 @@ export default {
       var date = new Date(timestamp * 1000);
       var hour = date.getHours();
       var minute = date.getMinutes();
-      // console.log(minute);
       if (minute<10) {
         minute = `0${minute}`
       }
@@ -59,7 +58,9 @@ export default {
       var month = date.getMonth();
       var year = date.getFullYear();
       var dayOrNight = false;
-
+      if (hour===0) {
+        hour=12
+      }
       if (hour > 12) {
         hour = hour - 12;
         dayOrNight = true;
@@ -103,7 +104,11 @@ export default {
   display: flex;
   align-items: center;
 }
-
+@media only screen and (max-width: 767px) {
+  .weather-metadata {
+    padding: 40px;
+  }
+}
 @media only screen and (max-width: 567px) {
   .weather-metadata-wrapper {
     flex-direction: column;
@@ -115,12 +120,12 @@ export default {
     margin-left: unset;
   }
   .weather-metadata {
-    padding: 40px;
+    padding: 30px;
   }
 }
 @media only screen and (max-width: 500px) {
   .weather-metadata {
-    padding: 40px 30px;
+    padding: 20px 30px;
   }
 }
 </style>
