@@ -48,6 +48,11 @@ export default {
       var date = new Date(timestamp * 1000);
       var hour = date.getHours();
       var minute = date.getMinutes();
+      // console.log(minute);
+      if (minute<10) {
+        minute = `0${minute}`
+      }
+      
       var day = date.getDay();
 
       var numberDate = date.getDate();
@@ -90,10 +95,32 @@ export default {
 .metadata-date {
   margin-right: auto;
 }
-.metadata-date p span{
-    font-family: 'Poppins', sans-serif;
+.metadata-date p span {
+  font-family: "Poppins", sans-serif;
 }
 .metadata-location {
   margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 567px) {
+  .weather-metadata-wrapper {
+    flex-direction: column;
+  }
+  .metadata-date {
+    margin-bottom: 15px;
+  }
+  .metadata-location {
+    margin-left: unset;
+  }
+  .weather-metadata {
+    padding: 40px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .weather-metadata {
+    padding: 40px 30px;
+  }
 }
 </style>

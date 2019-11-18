@@ -1,5 +1,5 @@
 <template>
-  <div class="weather-side-menu" :class="{hideOnBurgerClicked:getBurgerClicked}">
+  <div class="weather-side-menu" :class="{showOnBurgerClicked:getBurgerClicked}">
     <div class="side-data">
       <div class="side-info">
         <span class="side-key data-key">Area</span>
@@ -23,8 +23,8 @@ export default {
 };
 </script>
 <style>
-.hideOnBurgerClicked {
-  right: -25% !important;
+.showOnBurgerClicked {
+  right: 0 !important;
 }
 .weather-side-menu {
   height: 100vh;
@@ -34,7 +34,7 @@ export default {
   transition: 0.3s;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -25%;
 }
 .side-info {
   padding: 40px 35px;
@@ -62,12 +62,17 @@ export default {
     background: #1a1a1a;
     z-index: 9;
     width: 300px;
-  }
-  .hideOnBurgerClicked {
-    right: -300px !important;
+    right: -300px;
   }
   .side-data {
     padding-top: 75px;
   }
+}
+@media only screen and (max-width: 500px) {
+  .weather-side-menu {
+    width: 100%;
+    right: -100%;
+  }
+ 
 }
 </style>

@@ -74,12 +74,17 @@ body {
   margin: 0;
   padding: 0;
 }
-.fullWidth {
-  width: 100% !important;
+.widthAdjust {
+  width: 75% !important;
 }
 
 .container{
   width: 1150px;
   margin: 0 auto; 
+}
+@media only screen and (max-width:1150px) {
+  .widthAdjust{
+    width: 100% !important;
+  }
 }
 </style>

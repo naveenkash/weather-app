@@ -1,13 +1,13 @@
 <template>
-  <div class="navbar" :class="{fullWidth:getBurgerClicked}">
+  <div class="navbar" :class="{widthAdjust:getBurgerClicked}">
     <div class="logo">
       <h2>
         <a href="/">Weather App</a>
       </h2>
     </div>
     <div class="burger" @click="burgerclick()">
-      <div class="burger-line-1" :class="{rotateDown:!burgerclicked}"></div>
-      <div class="burger-line-1" :class="{rotateUp:!burgerclicked}"></div>
+      <div class="burger-line-1" :class="{rotateDown:burgerclicked}"></div>
+      <div class="burger-line-1" :class="{rotateUp:burgerclicked}"></div>
     </div>
   </div>
 </template>
@@ -33,7 +33,7 @@ export default {
 </script>
 <style lang="css" scoped>
 .navbar {
-  width: 75%;
+  width: 100%;
   height: auto;
   display: flex;
   align-items: center;
@@ -80,30 +80,25 @@ export default {
 }
 @media only screen and (max-width: 1150px) {
   .navbar {
-    width: 100%;
     padding: 20px 30px;
-    background:white;
+    background: white;
   }
   .burger {
     width: 30px;
     height: 20px;
-    position: fixed;
-    top: 25px;
-    right: 25px;
-    z-index: 25;
     margin-top: 5px;
   }
   .logo h2 a {
     color: #1a1a1a;
   }
   .burger-line-1 {
-  background: #1a1a1a;
-}
-.rotateDown{
-  top: 47%;
-}
-.rotateUp{
-  top: 47%;
-}
+    background: #1a1a1a;
+  }
+  .rotateDown {
+    top: 47%;
+  }
+  .rotateUp {
+    top: 47%;
+  }
 }
 </style>

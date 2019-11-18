@@ -1,5 +1,5 @@
 <template>
-  <div class="weather" :class={fullWidth:getBurgerClicked}>
+  <div class="weather" :class={widthAdjust:getBurgerClicked}>
     <div class="weather-container">
       <BackgroundVideo :atmosId="data.weather[0].id"/>
 
@@ -29,7 +29,7 @@ export default {
 <style lang="css" scoped>
 .weather {
   height: 100vh;
-  width: 75%;
+  width: 100%;
   transition: 0.3s;
 }
 .weather-container {
@@ -41,9 +41,9 @@ export default {
 .top-element {
   z-index: 10;
 }
-@media only screen and (max-width:1150px){
+/* @media only screen and (max-width:1150px){
   .weather{
     width: 100%;
   }
-}
+} */
 </style>

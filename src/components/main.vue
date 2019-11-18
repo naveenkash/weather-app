@@ -31,7 +31,6 @@ export default {
         return response.json();
       })
       .then(data => {
-        console.log(data);
         this.weatherData = data;
         this.setTemperature(data.main.temp);
       });
