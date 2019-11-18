@@ -1,20 +1,28 @@
 <template>
   <div id="app">
     <Main v-if="position.coords"></Main>
+    <LocationError v-if="!setLocationAllowed"/>
+    <Loading v-if="loading"/>
   </div>
 </template>
 
 <script>
 import Main from "./components/main.vue";
+import LocationError from "./components/locationErrorHandler/locationError";
+import Loading from "./components/loadingHandler/loading";
 import { mapActions } from "vuex";
 export default {
   name: "app",
   components: {
-    Main
+    Main,
+    LocationError,
+    Loading
   },
   data() {
     return {
-      position: {}
+      position: {},
+      setLocationAllowed: true,
+      loading: true
     };
   },
   methods: {
@@ -29,6 +37,8 @@ export default {
       }
     },
     displayLocationInfo(position) {
+      this.loading = false;
+      this.setLocationAllowed = true;
       this.setCoords(position);
       this.position = position;
     },
@@ -36,7 +46,8 @@ export default {
     handleLocationError(error) {
       switch (error.code) {
         case 1:
-          alert("please allow location to get the weather info");
+          this.setLocationAllowed = false;
+          this.loading = false;
           break;
         default:
           alert("some error occured");
@@ -52,7 +63,7 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -60,11 +71,14 @@ export default {
 }
 body {
   font-family: "Josefin Sans", sans-serif;
-  /* font-family: 'Poppins', sans-serif; */
   margin: 0;
   padding: 0;
 }
-.fullWidth{
-    width: 100% !important;
+.fullWidth {
+  width: 100% !important;
+}
+.container{
+  width: 1150px;
+  margin: 0 auto; 
 }
 </style>

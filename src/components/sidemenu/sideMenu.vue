@@ -48,7 +48,6 @@ export default {
 }
 .weather-head {
   font-size: 16px;
-  /* margin-bottom: 25px; */
 }
 .data-value {
   float: right;

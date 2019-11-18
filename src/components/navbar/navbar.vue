@@ -49,7 +49,6 @@ export default {
   margin-right: auto;
 }
 .logo h2 {
-  /* background: rgb(255, 255, 255); */
   padding: 5px;
 }
 .logo h2 a {

@@ -47,7 +47,6 @@ export default {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  /* background: rgb(255, 255, 255); */
   display: flex;
   align-items: center;
 }

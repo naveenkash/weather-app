@@ -5,7 +5,8 @@ export const store = new Vuex.Store({
   state: {
     coords: {},
     burgerClicked: false,
-    temperature: 0
+    temperature: 0,
+    locationAllowed: false
   },
   getters: {
     getCoords(state) {
@@ -26,13 +27,21 @@ export const store = new Vuex.Store({
       state.burgerClicked = value;
     },
     setTemperature(state, value) {
-      state.temperature = value;
+      state.temperature = value.toFixed(0);
+    },
+    setLocationAllowed(state, value) {
+      state.locationAllowed = value;
+    },
+
+    convertToCelsius(state) {
+      var tempInCelsius = ((state.temperature - 32) * 5 / 9)
+      state.temperature =tempInCelsius.toFixed(0);
+       
     },
     convertToFarenheit(state) {
-      state.temperature = state.temperature * (9 / 5) + 32;
-    },
-    convertToCelsius(state) {
-      state.temperature = ((state.temperature - 32) * 5) / 9;
+      var tempInFarenheit = (state.temperature * (9 / 5) + 32)
+      state.temperature =tempInFarenheit.toFixed(0);
+      
     }
   },
   actions: {
@@ -50,6 +59,9 @@ export const store = new Vuex.Store({
     },
     convertToCelsius(context) {
       context.commit("convertToCelsius");
+    },
+    setLocationAllowed(context, value) {
+      context.commit("setLocationAllowed", value);
     }
   }
 });
