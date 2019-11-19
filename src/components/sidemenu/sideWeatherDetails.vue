@@ -4,25 +4,25 @@
     <div class="side-info-value">
       <p>
         <span class="side-key data-key">Cloudy</span>
-        <span class="data-value">{{data.clouds.all}}%</span>
+        <span class="data-value">{{ data.clouds.all }}%</span>
       </p>
     </div>
     <div class="side-info-value">
       <p>
         <span class="side-key data-key">Humidity</span>
-        <span class="data-value">{{data.main.humidity}}%</span>
+        <span class="data-value">{{ data.main.humidity }}%</span>
       </p>
     </div>
     <div class="side-info-value">
       <p>
         <span class="side-key data-key">Visibility</span>
-        <span class="data-value">{{data.visibility/1000}} km</span>
+        <span class="data-value">{{ data.visibility / 1000 }} km</span>
       </p>
     </div>
     <div class="side-info-value">
       <p>
         <span class="side-key data-key">Wind</span>
-        <span class="data-value">{{data.wind.speed}} m/s</span>
+        <span class="data-value">{{ data.wind.speed }} m/s</span>
       </p>
     </div>
     <div class="side-info-value">

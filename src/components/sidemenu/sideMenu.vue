@@ -1,9 +1,12 @@
 <template>
-  <div class="weather-side-menu" :class="{showOnBurgerClicked:getBurgerClicked}">
+  <div
+    class="weather-side-menu"
+    :class="{ showOnBurgerClicked: getBurgerClicked }"
+  >
     <div class="side-data">
       <div class="side-info">
         <span class="side-key data-key">Area</span>
-        <span>{{data.name}}</span>
+        <span>{{ data.name }}</span>
       </div>
       <SideWeatherDetail class="side-info" :data="data" />
     </div>
@@ -73,6 +76,5 @@ export default {
     width: 100%;
     right: -100%;
   }
- 
 }
 </style>

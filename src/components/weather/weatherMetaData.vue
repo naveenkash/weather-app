@@ -3,11 +3,11 @@
     <div class="weather-metadata-wrapper">
       <div class="metadata-date">
         <p>
-          <span>{{this.getTime(data.dt)}}</span>
+          <span>{{ this.getTime(data.dt) }}</span>
         </p>
       </div>
       <div class="metadata-location">
-        <span>{{data.name}}, {{data.sys.country}}</span>
+        <span>{{ data.name }}, {{ data.sys.country }}</span>
       </div>
     </div>
   </div>
@@ -48,28 +48,27 @@ export default {
       var date = new Date(timestamp * 1000);
       var hour = date.getHours();
       var minute = date.getMinutes();
-      if (minute<10) {
-        minute = `0${minute}`
-      }
-      
       var day = date.getDay();
-
       var numberDate = date.getDate();
       var month = date.getMonth();
       var year = date.getFullYear();
       var dayOrNight = false;
-      if (hour===0) {
-        hour=12
-      }
+
       if (hour > 12) {
         hour = hour - 12;
         dayOrNight = true;
+      } else if (hour === 12) {
+        dayOrNight = true;
+      } else if (hour === 0) {
+        hour = 12;
+        dayOrNight = false;
       } else {
         dayOrNight = false;
       }
-
+      if (minute < 10) {
+        minute = `0${minute}`;
+      }
       var AMPM = dayOrNight ? "PM" : "AM";
-
       return `${hour}:${minute} ${AMPM} - ${this.getday(day)}, ${numberDate} ${
         this.months[month]
       } ${year}`;

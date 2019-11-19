@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Main v-if="position.coords"></Main>
-    <LocationError v-if="!setLocationAllowed"/>
-    <Loading v-if="loading"/>
+    <LocationError v-if="!setLocationAllowed" />
+    <Loading v-if="loading" />
   </div>
 </template>
 
@@ -78,22 +78,17 @@ body {
   width: 75% !important;
 }
 
-.container{
+.container {
   width: 1150px;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
-/* @media only screen and (max-width:1170px) {
-  .widthAdjust{
+@media only screen and (max-width: 1150px) {
+  .widthAdjust {
     width: 100% !important;
   }
-} */
-@media only screen and (max-width:1150px) {
-  .widthAdjust{
-    width: 100% !important;
-  }
-  .container{
+  .container {
     width: 100%;
-    padding:0 10px;
+    padding: 0 10px;
   }
 }
 </style>

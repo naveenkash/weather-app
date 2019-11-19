@@ -1,7 +1,7 @@
 <template>
-  <div class="weather" :class={widthAdjust:getBurgerClicked}>
+  <div class="weather" :class="{widthAdjust:getBurgerClicked}">
     <div class="weather-container">
-      <BackgroundVideo :atmosId="data.weather[0].id"/>
+      <BackgroundVideo :atmosId="data.weather[0].id" />
 
       <Navbar class="top-element" />
       <WeatherInfo :data="data" />
@@ -9,7 +9,7 @@
   </div>
 </template>
 <script>
-import {mapGetters} from 'vuex'
+import { mapGetters } from "vuex";
 import Navbar from "../navbar/navbar";
 import WeatherInfo from "./weatherInfo";
 import BackgroundVideo from "./backgroundVideo";
@@ -23,7 +23,7 @@ export default {
   },
   computed: {
     ...mapGetters(["getBurgerClicked"])
-  },
+  }
 };
 </script>
 <style lang="css" scoped>
@@ -41,9 +41,4 @@ export default {
 .top-element {
   z-index: 10;
 }
-/* @media only screen and (max-width:1150px){
-  .weather{
-    width: 100%;
-  }
-} */
 </style>

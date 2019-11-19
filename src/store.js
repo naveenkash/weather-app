@@ -29,19 +29,14 @@ export const store = new Vuex.Store({
     setTemperature(state, value) {
       state.temperature = value.toFixed(0);
     },
-    setLocationAllowed(state, value) {
-      state.locationAllowed = value;
-    },
 
     convertToCelsius(state) {
-      var tempInCelsius = ((state.temperature - 32) * 5 / 9)
-      state.temperature =tempInCelsius.toFixed(0);
-       
+      var tempInCelsius = ((state.temperature - 32) * 5) / 9;
+      state.temperature = tempInCelsius.toFixed(0);
     },
     convertToFarenheit(state) {
-      var tempInFarenheit = (state.temperature * (9 / 5) + 32)
-      state.temperature =tempInFarenheit.toFixed(0);
-      
+      var tempInFarenheit = state.temperature * (9 / 5) + 32;
+      state.temperature = tempInFarenheit.toFixed(0);
     }
   },
   actions: {
@@ -59,9 +54,6 @@ export const store = new Vuex.Store({
     },
     convertToCelsius(context) {
       context.commit("convertToCelsius");
-    },
-    setLocationAllowed(context, value) {
-      context.commit("setLocationAllowed", value);
     }
   }
 });

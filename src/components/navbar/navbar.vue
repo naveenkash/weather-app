@@ -1,18 +1,18 @@
 <template>
-  <div class="navbar" :class="{widthAdjust:getBurgerClicked}">
+  <div class="navbar" :class="{ widthAdjust: burgerclicked }">
     <div class="logo">
       <h2>
         <a href="/">Weather App</a>
       </h2>
     </div>
     <div class="burger" @click="burgerclick()">
-      <div class="burger-line-1" :class="{rotateDown:burgerclicked}"></div>
-      <div class="burger-line-1" :class="{rotateUp:burgerclicked}"></div>
+      <div class="burger-line-1" :class="{ rotateDown: burgerclicked }"></div>
+      <div class="burger-line-1" :class="{ rotateUp: burgerclicked }"></div>
     </div>
   </div>
 </template>
 <script>
-import { mapActions, mapGetters } from "vuex";
+import { mapActions } from "vuex";
 export default {
   data() {
     return {
@@ -25,9 +25,6 @@ export default {
       this.setBurgerClick(this.burgerclicked);
     },
     ...mapActions(["setBurgerClick"])
-  },
-  computed: {
-    ...mapGetters(["getBurgerClicked"])
   }
 };
 </script>
