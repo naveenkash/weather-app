@@ -1,6 +1,6 @@
 <template>
   <div class="weather-temp">
-    <h1 class="weather-degree">{{getTemperature}}</h1>
+    <h1 class="weather-degree">{{getTemperature}}&#176;</h1>
     <div class="weather-quote">
       <h1 class="weather-quote-1">
         <b>{{data.weather[0].main}}</b>
