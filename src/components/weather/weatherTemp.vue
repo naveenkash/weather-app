@@ -1,9 +1,9 @@
 <template>
   <div class="weather-temp">
-    <h1 class="weather-degree">{{getTemperature}}&#176;</h1>
+    <h1 class="weather-degree">{{getTemperature}}</h1>
     <div class="weather-quote">
       <h1 class="weather-quote-1">
-        <b>{{data.weather[0].main}}</b>
+        <b v-if="data && data.weather.length>0">{{data.weather[0].main}}</b>
       </h1>
     </div>
   </div>
