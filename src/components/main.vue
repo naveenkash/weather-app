@@ -1,14 +1,14 @@
 <template>
   <div class="main" v-if="weatherData.main">
     <Weather :data="weatherData" />
-    <SideMenu :data="weatherData"/>
+    <SideMenu :data="weatherData" />
   </div>
 </template>
 
 <script>
 import Weather from "./weather/weather";
 import SideMenu from "./sidemenu/sideMenu";
-import {mapActions, mapGetters } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 export default {
   name: "Main",
   components: {

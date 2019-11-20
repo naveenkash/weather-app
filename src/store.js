@@ -31,7 +31,7 @@ export const store = new Vuex.Store({
     },
 
     convertToCelsius(state) {
-      var tempInCelsius = ((state.temperature - 32) * 5) / 9;
+      var tempInCelsius = (state.temperature - 32) * 5 / 9;
       state.temperature = tempInCelsius.toFixed(0);
     },
     convertToFarenheit(state) {
