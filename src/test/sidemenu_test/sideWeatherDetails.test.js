@@ -17,13 +17,13 @@ describe("check if convert temperature action is firing", () => {
   });
 
   it("convertToFarenheit is firing when checkbox is checked", () => {
-    const propData = {
+    const propsData = {
       clouds: { all: 40 },
       visibility: 2,
       main: { humidity: 40 },
       wind: { speed: 1.33 }
     };
-    const wrapper = mount(sideWeatherDetails, { store, localVue, propData });
+    const wrapper = mount(sideWeatherDetails, { store, localVue, propsData });
     const checkbox = wrapper.find({ ref: "convertTemp" });
     checkbox.setChecked();
     expect(actions.convertToFarenheit).toHaveBeenCalled();
