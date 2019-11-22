@@ -51,12 +51,18 @@ export default {
     padding: 0px 40px;
   }
   .weather-quote {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
+  }
+   .temp-degree{
+    font-size: 4em;
   }
 }
 @media only screen and (max-width: 500px) {
   .weather-temp {
     padding: 0px 30px;
+  }
+  .temp-degree{
+    font-size: 3em;
   }
 }
 @media only screen and (max-width: 400px) {
