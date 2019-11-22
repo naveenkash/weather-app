@@ -45,7 +45,11 @@ export default {
 .weather-quote-1 {
   font-size: 30px;
 }
-
+@media only screen and (max-width: 901px) {
+ .temp-degree{
+    font-size: 5em;
+  }
+}
 @media only screen and (max-width: 567px) {
   .weather-temp {
     padding: 0px 40px;

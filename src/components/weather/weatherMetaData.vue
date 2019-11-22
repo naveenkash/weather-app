@@ -103,7 +103,7 @@ export default {
   display: flex;
   align-items: center;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 901px) {
   .weather-metadata {
     padding: 40px;
   }
