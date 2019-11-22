@@ -28,7 +28,7 @@ export default {
 </script>
 <style lang="css" scoped>
 .weather {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   transition: 0.3s;
 }

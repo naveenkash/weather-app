@@ -38,6 +38,8 @@ export default {
   position: fixed;
   top: 0;
   right: -25%;
+  overflow-y:auto;
+  padding-bottom:20px;
 }
 .side-info {
   padding: 40px 35px;

@@ -2,7 +2,7 @@
   <div class="weather-temp">
     <div class="temp-degree">
       <h1 class="weather-degree">{{getTemperature}}</h1>
-      <span>&#176;</span>
+      <span>&nbsp; &#176;</span>
     </div>
     <div class="weather-quote">
       <h1 class="weather-quote-1">

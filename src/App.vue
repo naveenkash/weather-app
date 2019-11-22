@@ -77,6 +77,16 @@ body {
 .widthAdjust {
   width: 75% !important;
 }
+::-webkit-scrollbar{
+  width: 10px;
+  background: rgb(255, 255, 255);
+}
+::-webkit-scrollbar-thumb{
+  background:  lightgray;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: rgb(156, 156, 156);
+} 
 
 .container {
   width: 1150px;

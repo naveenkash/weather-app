@@ -43,9 +43,11 @@ export default {
 
 <style scoped>
 .main {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  overflow: hidden;
+  min-height:500px;
+  overflow-y: auto;
+  /* overflwo-x:hidden; */
   display: flex;
   align-items: center;
 }
